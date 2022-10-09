@@ -7,7 +7,7 @@ cases this function will convert any lowercase string to upper case.And after co
 we used string.equals() function to compare both  the string if they match then the program will show 
 a message that "The string is palindrom"
 if they do not matches it will show a message that "Entered string is not palindrom".
-This program works fine on the integer type input also. But doesn't work fine on special characters.
+This program works fine on the integer type input and  also works fine on special characters.
 
 input --
 raar
