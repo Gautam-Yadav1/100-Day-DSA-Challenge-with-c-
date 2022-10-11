@@ -1,50 +1,42 @@
-In this challenge, we work with string streams.
+Struct is a way to combine multiple fields to represent a composite data structure, which further lays the foundation for Object Oriented Programming.
+For example, we can store details related to a student in a struct consisting of his age (int), first_name (string), last_name (string) and standard (int).
 
-stringstream is a stream class to operate on strings. It implements input/output operations on memory (string) based streams. stringstream can be helpful in different type of parsing. The following operators/functions are commonly used here
+struct can be represented as
 
-Operator >> Extracts formatted data.
-Operator << Inserts formatted data.
-Method str() Gets the contents of underlying string device object.
-Method str(string) Sets the contents of underlying string device object.
-Its header file is sstream.
-
-One common use of this class is to parse comma-separated integers from a string (e.g., "23,4,56").
-
-stringstream ss("23,4,56");
-char ch;
-int a, b, c;
-ss >> a >> ch >> b >> ch >> c;  // a = 23, b = 4, c = 56
-Here ch is a storage area for the discarded commas.
-
-If the >> operator returns a value, that is a true value for a conditional. Failure to return a value is false.
-
-Given a string of comma delimited integers, return a vector of integers.
-
-Function Description
-
-Complete the parseInts function in the editor below.
-
-parseInts has the following parameters:
-
-string str: a string of comma separated integers
-Returns
-
-vector<int>: a vector of the parsed integers.
-Note You can learn to push elements onto a vector by solving the first problem in the STL chapter.
+struct NewType {
+    type1 value1;
+    type2 value2;
+    .
+    .
+    .
+    typeN valueN;
+};
+You have to create a struct, named Student, representing the student's details, as mentioned above, and store the data of a student.
 
 Input Format
 
-There is one line of n integers separated by commas.
+Input will consist of four lines.
+The first line will contain an integer, representing age.
+The second line will contain a string, consisting of lower-case Latin characters ('a'-'z'), representing the first_name of a student.
+The third line will contain another string, consisting of lower-case Latin characters ('a'-'z'), representing the last_name of a student.
+The fourth line will contain an integer, representing the standard of student.
 
-Constraints
+Note: The number of characters in first_name and last_name will not exceed 50.
 
-The length of str is less than 8*10^5 .
+Output Format
 
-Sample Input
+Output will be of a single line, consisting of age, first_name, last_name and standard, each separated by one white space.
 
-23,4,56
-Sample Output
+P.S.: I/O will be handled by HackerRank.
 
-23
-4
-56
+Sample Input --
+
+15
+john
+carmack
+10
+
+
+Sample Output  --
+
+15 john carmack 10
