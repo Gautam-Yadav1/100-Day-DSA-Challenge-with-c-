@@ -1,27 +1,25 @@
-#include <sstream>
+#include <cmath>
+#include <cstdio>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-vector<int> parseInts(string str) {
-    stringstream ss(str);
-    vector<int> v;
-    int a;
-    char ch;
-    while(ss >> a >> ch){
-        v.push_back(a);
-    }
-    v.push_back(a);
-    return v;
-}
+/*
+    add code for struct here.
+*/
+struct Student{
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+};
 
 int main() {
-    string str;
-    cin >> str;
-    vector<int> integers = parseInts(str);
-    for(int i = 0; i < integers.size(); i++) {
-        cout << integers[i] << "\n";
-    }
+    Student st;
+    
+    cin >> st.age >> st.first_name >> st.last_name >> st.standard;
+    cout << st.age << " " << st.first_name << " " << st.last_name << " " << st.standard;
     
     return 0;
 }
