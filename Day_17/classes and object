@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <cassert>
+using namespace std;
+class Student
+{
+    private:
+        int scores[5];
+    public:
+        // store scores as an array
+        void input()
+        {
+            for (int i = 0; i<5; i++) {
+                cin>>this->scores[i];
+            }
+        }
+        // calculate total score
+        int calculateTotalScore()
+        {
+            int sum = 0;
+            for (int i =0; i<5; i++) {
+                sum+=this->scores[i];
+            }
+            return sum;
+        }
+};
+// Write your Student class here
+
+int main() {
