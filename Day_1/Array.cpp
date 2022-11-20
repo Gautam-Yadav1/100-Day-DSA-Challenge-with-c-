@@ -4,7 +4,6 @@ int main(){
     int n,d;
     cin>>n;
     int arr[n];
-    
     cout<<"enter the array :";
     for (int  i = 0; i < n; i++)
     {
