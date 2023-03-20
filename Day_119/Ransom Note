@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool canConstruct(string r, string m) {
+        int fM[26];
+        int fR[26];
+        int n1 = r.length(), n2 = m.length();
+        for(int i = 0 ; i<26 ; i++)
+        {
+            fM[i] = 0;
+            fR[i] = 0;
+        }
+        for(int i = 0 ; i<n1 ; i++)
+            fR[int(r[i])%97]++;
+        for(int i = 0 ; i<n2 ; i++)
+            fM[int(m[i])%97]++;
+        for(int i = 0 ; i<26 ; i++)
+            if(fM[i]>=fR[i])
+                continue;
+            return false;
+        return true;
+        // code by OK!
+    }
+};
