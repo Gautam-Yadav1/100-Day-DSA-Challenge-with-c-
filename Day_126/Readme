@@ -1,14 +1,16 @@
-Find the majority element in the array. A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element). 
+As per the problem statement we have to find leaders in an array. An element is a leader if it is greater than all the elements to its right side.
 
-Examples : 
+Let’s start!
 
-Input : A[]={3, 3, 4, 2, 4, 4, 2, 4, 4}
-Output : 4
-Explanation: The frequency of 4 is 5 which is greater than the half of the size of the array size. 
+To Show You Some Instances
+Instance-1
+Suppose the original array is {16, 17, 4, 3, 11, 14, 23, 2, 6, 10}.
+After finding leaders in an array the result will be − 23 10
 
-Input : A[] = {3, 3, 4, 2, 4, 4, 2, 4}
-Output : No Majority Element
-Explanation: There is no element whose frequency is greater than the half of the size of the array size.
-1
-Time Complexity: O(n*n), A nested loop is needed where both the loops traverse the array from start to end.
-Auxiliary Space: O(1), No extra space is required.
+Instance-2
+Suppose the original array is {16, 17, 4, 3, 5, 6, 9, 1, 8, 2}.
+After finding leaders in an array the result will be − 17 9 8 2
+
+Instance-3
+Suppose the original array is {1, 5, 7, 3, 2, 1}
+After finding leaders in an array the result will be − 7 1
