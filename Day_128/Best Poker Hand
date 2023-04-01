@@ -1,0 +1,29 @@
+class Solution {
+public:
+string bestHand(vector<int > ranks, vector<char> suits)
+{
+int count=1;
+int freq=1;
+int maxi=1;
+int maxim=1;
+sort(ranks.begin(),ranks.end());
+sort(suits.begin(),suits.end());
+for(int i=1;i<5;i++){
+if(ranks[i]==ranks[i-1]){
+freq++;
+maxim=max(maxim,freq);
+}
+else{freq=1;}
+if(suits[i]==suits[i-1]){
+count++;
+maxi=max(count,maxi);
+}
+else{count=1;}
+}
+if(maxi==5){return "Flush";}
+else if(maxim>=3){return "Three of a Kind";}
+else if(maxim==2){return "Pair";}
+else{return "High Card";}
+
+}
+};
