@@ -1,30 +1,28 @@
-412. Fizz Buzz
+367. Valid Perfect Square
 Easy
-1.8K
-255
+3.5K
+277
 Companies
-Given an integer n, return a string array answer (1-indexed) where:
+Given a positive integer num, return true if num is a perfect square or false otherwise.
 
-answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
-answer[i] == "Fizz" if i is divisible by 3.
-answer[i] == "Buzz" if i is divisible by 5.
-answer[i] == i (as a string) if none of the above conditions are true.
+A perfect square is an integer that is the square of an integer. In other words, it is the product of some integer with itself.
+
+You must not use any built-in library function, such as sqrt.
+
  
 
 Example 1:
 
-Input: n = 3
-Output: ["1","2","Fizz"]
+Input: num = 16
+Output: true
+Explanation: We return true because 4 * 4 = 16 and 4 is an integer.
 Example 2:
 
-Input: n = 5
-Output: ["1","2","Fizz","4","Buzz"]
-Example 3:
-
-Input: n = 15
-Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
+Input: num = 14
+Output: false
+Explanation: We return false because 3.742 * 3.742 = 14 and 3.742 is not an integer.
  
 
 Constraints:
 
-1 <= n <= 104
+1 <= num <= 231 - 1
