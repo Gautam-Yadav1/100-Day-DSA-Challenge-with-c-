@@ -1,32 +1,31 @@
-326. Power of Three
+278. First Bad Version
 Easy
-2.6K
-243
+7.4K
+3K
 Companies
-Given an integer n, return true if it is a power of three. Otherwise, return false.
+You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
-An integer n is a power of three, if there exists an integer x such that n == 3x.
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+
+You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
  
 
 Example 1:
 
-Input: n = 27
-Output: true
-Explanation: 27 = 33
+Input: n = 5, bad = 4
+Output: 4
+Explanation:
+call isBadVersion(3) -> false
+call isBadVersion(5) -> true
+call isBadVersion(4) -> true
+Then 4 is the first bad version.
 Example 2:
 
-Input: n = 0
-Output: false
-Explanation: There is no x where 3x = 0.
-Example 3:
-
-Input: n = -1
-Output: false
-Explanation: There is no x where 3x = (-1).
+Input: n = 1, bad = 1
+Output: 1
  
 
 Constraints:
 
--231 <= n <= 231 - 1
- 
+1 <= bad <= n <= 231 - 1
